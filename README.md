@@ -1,14 +1,12 @@
-<div align="center">
-    <!-- 第一行图片 -->
-    <img src="https://github.com/wuxaye/Android-ONVIF/tree/main/img/onvif-1.png" width="45%" />
-    <img src="https://github.com/wuxaye/Android-ONVIF/tree/main/img/onvif-2.png" width="45%" />
-</div>
 
-<div align="center">
-    <!-- 第二行图片 -->
-    <img src="https://github.com/wuxaye/Android-ONVIF/tree/main/img/onvif-3.png" alt="图片3描述" width="45%" />
-    <img src="https://github.com/wuxaye/Android-ONVIF/tree/main/img/onvif-4.png" alt="图片4描述" width="45%" />
-</div>
+
+<p align="center">
+ <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/tree/main/img/onvif-1.png" >  <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/tree/main/img/onvif-2.png" >
+</p>
+
+<p align="center">
+ <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/tree/main/img/onvif-3.png" >  <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/tree/main/img/onvif-4.png" >
+</p>
 
 
 在安卓设备上通过ONVIF协议搜索摄像头的完整流程可以分为以下几个关键步骤：
