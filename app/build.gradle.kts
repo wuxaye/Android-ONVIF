@@ -1,3 +1,6 @@
+import java.text.SimpleDateFormat
+import java.util.Date
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -11,14 +14,24 @@ android {
         applicationId = "com.xaye.onvifexplorer"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 11
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("../platform.keystore")
+            storePassword = "wif210301"
+            keyAlias = "wif_autograph"
+            keyPassword = "wif210301"
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -38,6 +51,24 @@ android {
         buildConfig = true
         viewBinding = true
     }
+
+    // 输出类型
+    android.applicationVariants.all {
+        // 编译类型
+        val buildType = this.buildType.name
+        val date = SimpleDateFormat("MMdd").format(Date())
+        outputs.all {
+            // 判断是否是输出 apk 类型
+            if (this is com.android.build.gradle
+                .internal.api.ApkVariantOutputImpl
+            ) {
+                this.outputFileName = "onvifexplorer" +
+                        "_v${android.defaultConfig.versionName}_${date}_${buildType}.apk"
+            }
+        }
+    }
+
+
 }
 
 dependencies {
