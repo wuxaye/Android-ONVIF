@@ -11,7 +11,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tip:如摄像头需要验证，则需要配置账号、密码信息，厂商名称只需包含关键字即可\n\n 默认用户名：admin 密码：123456，有的摄像头不需要验证可以不用管"
+        android:text="Tip:如摄像头需要验证，则需要配置账号、密码信息，厂商名称只需包含关键字即可
+        \n默认用户名：admin 密码：123456，有的摄像头不需要验证可以不用管
+        \n子网掩码要和摄像头的一致！否则搜索不到！！！如设备子网掩码为255.255.255.0，则子网掩码必须为255.255.255.0"
         android:textColor="#FF6D00" />
 
     <LinearLayout
@@ -113,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="未找到任何设备。"
+        android:text="未找到任何设备 \n\n 请检查子网掩码是否一致或在浏览器输入摄像头iP能否进入摄像头后台"
         android:visibility="gone" />
 
     <!-- 设备列表 -->

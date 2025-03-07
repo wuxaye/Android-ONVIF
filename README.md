@@ -8,6 +8,10 @@
  <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/blob/main/img/onvif-3.png" >  <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/blob/main/img/onvif-4.png" >
 </p>
 
+### 海康摄像头配置
+<p align="center">
+ <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/blob/main/img/hk1.png" >  <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/blob/main/img/hk2.png" >
+</p>
 
 在安卓设备上通过ONVIF协议搜索摄像头的完整流程可以分为以下几个关键步骤：
 
