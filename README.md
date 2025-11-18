@@ -13,6 +13,25 @@
  <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/blob/main/img/hk1.png" >  <img width="45%" height="auto" src="https://github.com/wuxaye/Android-ONVIF/blob/main/img/hk2.png" >
 </p>
 
+### 注意事项
+> 同一网段下onvif发现不了设备？
+在安卓设备上使用 ifconfig 查看网络配置，如下为插入网线的网络信息：
+```
+eth0      Link encap:Ethernet  HWaddr c2:97:16:3a:a9:8c  Driver sunxi-gmac
+          inet addr:192.168.1.15  Bcast:192.168.255.255  Mask:255.255.0.0 
+          inet6 addr: fe80::279a:1e2f:fc39:7f0/64 Scope: Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2136 errors:0 dropped:3 overruns:0 frame:0 
+          TX packets:236 errors:0 dropped:0 overruns:0 carrier:0 
+          collisions:0 txqueuelen:1000 
+          RX bytes:237857 TX bytes:34357 
+          Interrupt:120
+```
+要想摄像头被onvif发现，则首先要求摄像头和安卓设备在同一网段下，如上则为 192.168. 网段下，至于为什么不是 192.168.1，是因为 子网掩码为 255.255.0.0，只看前两位！
+对应的 传入的onvif 广播地址则为 192.168.255.255，这样onvif才能发现设备！
+
+---
+
 在安卓设备上通过ONVIF协议搜索摄像头的完整流程可以分为以下几个关键步骤：
 
 ### 1. 前期准备
